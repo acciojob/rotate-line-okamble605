@@ -5,39 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rotating Line</title>
   <link rel="stylesheet" href="styles.css">
-</head>
-<btable {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
+  <style>
+    /* Basic table styles */
+    table {
+      font-family: Arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
 
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 15px;
-}
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 55px;
+    }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-</style>
+    tr:nth-child(even) {
+      background-color: #dddddd;
+		
+    }
+
+    /* Styling for the rotating line */
+    #line {
+      width: 200px;
+      height: 2px;
+      background-color: black;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform-origin: center;
+      transform: translate(-50%, -50%);
+    }
+  </style>
 </head>
 <body>
 
+<!-- Table layout for Instructions and Expected Appearance -->
+<table>
+  <tr>
+    <!-- First Column: Instructions -->
+    <td style="text-align: center; font-weight: bold;">Instructions</td>
+    <!-- Second Column: Expected Appearance -->
+    <td style="text-align: center; font-weight: bold;">Expected Appearance</td>
+  </tr>
+  <tr>
+    <!-- First Column: Instruction Content -->
+    <td>
+      Develop a rotating line according to the specifications. The line should rotate smoothly and continuously.
+    </td>
+    <!-- Second Column: Rotating Line -->
+    <td>
+      <div id="line"></div>
+    </td>
+  </tr>
+</table>
 
-<div class="row">
-  <div class="column" style="background-color:#aaa;">
-    <h2>Introduction</h2>
-    <p>Develop a rotating line according to the specifications. The line should rotate smoothly and continuously.</p>
-  </div>
-  <div class="column" style="background-color:#bbb;">
-    <h2>Excepted Apperance</h2>
-    
-	  <div id="line"></div>
-  </div>
-</div>
+<script src="script.js"></script>
 
-  <script src="script.js"></script>
 </body>
 </html>
