@@ -1,4 +1,67 @@
-/*  your css code here. If applicable */
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container for the two columns */
+.container {
+  display: flex;
+  width: 80%;
+  max-width: 1200px;
+}
+
+/* Left column (Instructions and description) */
+.left-column {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  border-right: 2px solid #ddd;
+}
+
+/* Right column (Expected Appearance and rotating line) */
+.right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  position: relative;
+  padding: 20px;
+}
+
+/* Table structure for left and right columns */
+.table {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cell {
+  font-size: 16px;
+  color: #333;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Style for the rotating line */
 #line {
   width: 200px;
   height: 2px;
@@ -6,7 +69,6 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform-origin: center; /* Pivot point for rotation */
+  transform-origin: center;
   transform: translate(-50%, -50%);
 }
-

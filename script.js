@@ -1,11 +1,9 @@
-//your JS code here. If required.
 const line = document.getElementById('line');
 let angle = 0;
 
 function rotateLine() {
-  angle += 2; // Increment angle by 2 degrees
+  angle += 2; // Increase the angle by 2 degrees
   line.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
-  requestAnimationFrame(rotateLine); // Smooth animation
 }
 
-rotateLine();
+setInterval(rotateLine, 20); // Rotate every 20 milliseconds
